@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> </title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="fullscreen-bg">
+        <video loop="true" muted="true" autoplay="true" poster="./media/wallpaper.jpg" class="fullscreen-bg__video">
+            <source src="./media/wallpaper.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <a href="./index.html"><span class="arrow left back-icon"></span></a>
+
+    <div class="content">
+        <div class="container">
+            <h1 class="content-heading"> </h1>
+            <div class="content-row">
+                <div class="code">
+                    <pre><code class="language-javascript">
+// let pass = Number(prompt('Введите пароль в числовом формате'));
+// while (pass !== 123) {
+// pass = Number(prompt('Введите пароль в числовом формате'));
+// }
+
+// let pass;
+// do {
+//     pass = Number(prompt('Введите пароль в числовом формате'));
+// } while (pass !== 123);
+
+const students = ['Ivanov', 'Petrov', 'Sidorov'];
+const studentsCopy = students.slice(0, 2); // Получаем первых двух студентов
+console.log(studentsCopy);
+const studentsPraticeTimes = [20, 135, 87];
+
+studentsPraticeTimes.pop();
+const lastStudent = students.pop(); // Вынимает последний элемент
+console.log(lastStudent); // 'Sidorov'
+
+studentsPraticeTimes.shift();
+const firstStudent = students.shift(); // Вынимаем первый элемент
+console.log(firstStudent); // 'Иванов'
+
+
+// let index = Number(prompt('Скольких студентов вы хотите добавить?'));
+// for (let i = 0; i < index; i++) {
+//     students.push(prompt('Введите имя студента: '));
+//     studentsPraticeTimes.push(Number(prompt('Введите время студента: ')));
+// }
+
+// let fullPracticeTime = 0;
+// for (let i = 0; i < students.length; i++) {
+//     fullPracticeTime += studentsPraticeTimes[i];
+//     console.log(students[i], ' - practice time: ', studentsPraticeTimes[i]);
+// }
+// console.log('Full practice time: ', fullPracticeTime);
+
+const filePath = "C:/projects/bestProject/src/images/background-image.png";
+const filePathCopy = filePath.slice(); // Создаём копию filePath
+console.log(filePathCopy);
+
+const fileName = filePath.split('/').pop(); // Разделим строку на составляющие и 
+// превратим её в массив по средствам split('/'), а потом уже вызовем новый метод pop()
+console.log(fileName); // "background-image.png"
+
+const diskName = filePath.split('/').shift(); // Разделим строку на составляющие и
+console.log(diskName); // "C:"
+
+const names = ["Анна", "Иван", "Мария", "Алексей", "Екатерина",
+    "Дмитрий", "Ольга", "Павел", "Наталья", "Сергей"];
+console.log(names.indexOf("Ольга"));
+names.unshift("Хуйдл");
+names.pop();
+
+//////////////////////////////////////////////////////////////////////////////
+deleteName = () => {
+    names.pop();
+    names.forEach(element => {
+        console.log(element);
+    });
+    console.log(names);
+} 
+                    </code></pre>
+                </div>
+                <div class="result">
+                    <pre>
+push
+Метод push принимает один или несколько аргументов, 
+которые будут добавлены в конец
+массива
+
+pop
+Метод pop позволяет извлечь из массива последний 
+элемент, при этом он удаляется измассива, а если 
+массив пустой, то вернется undefined. Этот метод 
+часто используется чтобы получить последний 
+элемент массива
+
+Также этот метод позволяет получать последний 
+элемент из строки, которую можно разделить
+на части, например у нас есть полный путь до файла
+C:/projects/bestProject/src/images/background-image.png 
+и мы хотим из этого пути получить
+только файл. Всю строку можно разбить на части, 
+разделенные символом косой черты (слеш “/”), и взять 
+последнюю такую часть
+
+shift
+Этот метод произошел от английского слова shift - сдвигать. 
+Данный метод извлекает нулевой элемент из массива, при этом 
+сдвигает все оставшиеся элементы массива на одну ячейку
+влево.
+                    </pre>
+                    <button onclick="deleteName()">УДАЛИТЬ ПРИКОЛ</button>
+                    <div class="wrapper-grid">
+                        <div>Старт</div>
+                        <div>Конец</div>
+                        <div>Результат</div>
+
+                        <div>Не задан</div>
+                        <div>Не задан</div>
+                        <div>Метод slice возьмет весь
+                            исходный массив и создаст
+                            его копию.</div>
+                        
+                        <div>Задан в пределах длины
+                            массива</div>
+                        <div>Не задан </div>
+                        <div>Метод slice отрежет кусочек
+                            от исходного массива
+                            начиная с элемента,
+                            заданного аргументом старт
+                            и до конца исходного
+                            массива.</div>
+
+                        
+                        <div>Задан больше, чем длина
+                            массива</div>
+                        <div>Не задан</div>
+                        <div>Вернется пустой массив.</div>
+
+                        <div>Задан отрицательным</div>
+                        <div>Не задан</div>
+                        <div>Метод slice возьмет часть
+                            исходного массива, начиная
+                            отсчет начального индекса с
+                            конца массива.</div>
+
+                        <div>Задан в пределах длины
+                            массива</div>
+                        <div>Задан в пределах длины
+                            массива, больше чем
+                            аргумент старт</div>
+                        <div>Метод slice возьмет часть
+                            массива, начиная с элемента
+                            указанного аргументом
+                            старт, и заканчивания
+                            элементом указанным
+                            аргументом конец.
+                            </div>
+
+
+                        <div>Задан в пределах длины
+                            массива</div>
+                        <div>Задан отрицательным </div>
+                        <div>Метод slice возьмет часть
+                            массива, начиная с элемента
+                            указанного аргументом
+                            старт, и заканчивания
+                            элементом, позиция которого
+                            будет вычислена от конца
+                            массива в соответствии с
+                            аргументом конец.
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/prism.js"></script>
+    <script src="./js/lesson03.js"></script>
+</body>
+
+</html>

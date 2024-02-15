@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson01</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="fullscreen-bg">
+        <video loop="true" muted="true" autoplay="true" poster="./media/wallpaper.jpg" class="fullscreen-bg__video">
+            <source src="./media/wallpaper.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <a href="./index.html"><span class="arrow left back-icon"></span></a>
+
+    <div class="content">
+        <div class="container">
+            <h1 class="content-heading">alert prompt</h1>
+            <div class="content-row">
+                <div class="code">
+                    <pre><code class="language-javascript">
+console.log(1 === "1"); //false
+console.log(1 == false); //false
+console.log(null !== 1); //true
+let a, b;
+b = (10 !== "10") ? a = 'Правда' : a = 'Ложь';
+
+alert("Для продолжения введите свой возраст");
+let age = prompt("Введите ваш возраст:", 18);
+
+if (age >= 18) {
+    console.log("Добро пожаловать");
+} else if (age == 17) {
+    console.log("Подождите годик");
+} else {
+    let answer = "Ты чё тут зАбыл, пиздЮк?";
+    console.log(answer.toLowerCase());
+}
+
+console.log('Конкатенация ' + 'строк');
+console.log(`Вывод через доллар переменной age: ${age}`);
+                    </code></pre>
+                </div>
+                <div class="result">
+                    <pre>
+Значения, приводящиеся к true (Truthy) и false (Falsy) 
+    false
+● "" (пустая строка);
+● 0, -0, NaN (0 и NaN);
+● null, undefined;
+● false.
+    true
+● "Hello" (непустые строки);
+● 42;
+● true;
+● [ ], [ 1, "2", 3 ] (массивы);
+● { }, { a: 42 } (объекты);
+● function foo() { .. }
+(функции).
+                    </pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/prism.js"></script>
+    <script src="./js/lesson01.js"></script>
+</body>
+
+</html>
