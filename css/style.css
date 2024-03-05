@@ -7,6 +7,10 @@ body {
   font-size: 16px;
 }
 
+.none{
+  display: none !important;
+}
+
 button {
   display: block;
   position: relative;
@@ -228,16 +232,121 @@ a {
   background: linear-gradient(180.00deg, rgba(42, 43, 37, 0.92) 8.252%, rgba(39, 40, 34, 0.92) 87.238%, rgba(39, 40, 34, 0) 154.435%);
 }
 
-.wrapper-grid{
+.menu {
+  position: relative;
+}
+
+.menu__button {
+  border-radius: 0px;
+  opacity: 1;
+  color: #000;
+  background-color: yellow;
+  padding: 8px;
+  font-size: 16px;
+}
+
+.menu._active .menu__button span:first-child {
+  display: none;
+}
+
+.menu._active .menu__button span:last-child {
+  display: block;
+}
+
+.menu__button span:first-child {
+  display: block;
+}
+
+.menu__button span:last-child {
+  display: none;
+}
+
+.menu._active .menu__list{
+  display: block;
+}
+
+.menu .menu__list{
+  display: none;
+}
+
+.menu__button:hover {
+  background-color: rgb(250, 250, 84);
+}
+
+.menu__button:active {
+  background-color: rgb(255, 255, 116);
+  
+}
+
+.menu__list {
+  position:absolute;
+  background-color: rgb(119, 65, 119);
+  color: #fff;
+  text-decoration: underline;
+  display: flex;
+  flex-direction: column;
+  row-gap: 11px;
+  width: 133.73px;
+  padding: 12px;
+  left: 0;
+  top: 36px;
+  z-index: 99;
+}
+
+.wrapper-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-} 
+}
 
 
-.wrapper-grid div{
+.wrapper-grid div {
   outline: 2px solid rgba(109, 56, 36, 0.253);
   border-radius: 10px;
   /* display: flex; */
   align-items: center;
   min-height: 40px;
+  padding: 10px;
+}
+
+.text-edited {
+  color: red;
+  font-size: 22px;
+}
+
+.square-flex {
+  display: flex;
+  column-gap: 20px;
+  padding: 0 40px;
+}
+
+.square {
+  width: 30px;
+  height: 30px;
+  background-color: #84d1e9;
+}
+
+.mouse-block{
+  position: relative;
+  background-color: #2A407C;
+  width: 300px;
+  height: 150px;
+}
+
+.block__mouse-enter{
+  position: absolute;
+  background-color: #707faa;
+  z-index: 98;
+  width: 50px;
+  height: 50px;
+  left: 175px;
+  top: 95px;
+}
+
+.textarea__item {
+	width: 300px;
+	height: 50px;
+	padding: 10px;
+	font-size: 18px;
+	color: #fff;
+	background-color: rgb(44, 43, 43);
 }

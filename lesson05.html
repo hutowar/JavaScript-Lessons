@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> </title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="fullscreen-bg">
+        <video loop="true" muted="true" autoplay="true" poster="./media/wallpaper.jpg" class="fullscreen-bg__video">
+            <source src="./media/wallpaper.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <a href="./index.html"><span class="arrow left back-icon"></span></a>
+
+    <div class="content">
+        <div class="container">
+            <h1 class="content-heading"> </h1>
+            <div class="content-row">
+                <div class="code">
+                    <pre><code class="language-javascript">
+                        
+                    </code></pre>
+                </div>
+                <div class="result">
+<pre>
+    Введение в DOM
+Мы видим, что каждый HTML-элемент и текст в документе имеют собственную запись в дереве — каждый из
+них называется узлом (node). Для описания узла и его положения в дереве используются термины:
+● Element node — элемент, как он существует в DOM.
+● Root node — верхний узел в дереве, который в случае HTML всегда представляет собой HTML-узел. Другие
+типы разметки, такие как SVG и пользовательский XML, имеют разные корневые элементы.
+● Child node (узел-ребёнок) — узел, находящийся прямо внутри другого узла. Так, IMG в приведённом выше
+примере считается дочерним элементом SECTION.
+● Descendant node (узел-потомок) — узел внутри дочернего элемента. IMG в приведённом выше примере
+считается дочерним элементом SECTION и потомком для родителя SECTION. IMG не ребёнок BODY, так как
+находится на двух уровнях ниже дерева в дереве, но он считается потомком BODY.
+● Ancestor node (узел-прародитель) — один из родительских узлов родителя текущего узла. Любой узел,
+для которого текущий узел представляется потомком, будет его прародителем.
+● Parent node (узел-родитель) — узел, в который входит текущий узел. Например, BODY — родительский
+узел SECTION в приведённом выше примере.
+● Sibling nodes (родственный узел) — узлы, лежащие на одном уровне в дереве DOM. Например, IMG и P —
+братья и сёстры в приведённом выше примере.
+● Text node — узел, содержащий текстовую строку
+</pre>
+<button class="dButton">Удалить текстовую ноду</button>
+<button onclick="replaceNode()">Заменить текстовую ноду</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/prism.js"></script>
+    <script src="./js/lesson05.js"></script>
+</body>
+
+</html>
